@@ -1,4 +1,4 @@
-FUNCTION dot_product(v1,v2 : ARRAY_OF integer; , ps:integer;)
+FUNCTION dot_product(v1,v2 : ARRAY_OF integer; ):integer;
    VAR
    i:integer;
    BEGIN
@@ -23,7 +23,7 @@ FOR i FROM 0 TO n-1 STEP step  DO
     read(v2[i]);
 END_FOR
     FOR k FROM 0 TO n-1 STEP step DO
-        ps:= dot_product(v1, v2, ps)
+        ps:= dot_product(v1, v2)
         IF ps = 0 THEN
             PRINT "Les vecteurs v1 et v2 sont orthogonaux."
         ELSE
@@ -35,7 +35,7 @@ END ALGORITHM
 
 
 // problem 2 en procedure 
-PROCEDURE dot_product(v1,v2 : ARRAY_OF integer; , ps:integer;)
+PROCEDURE dot_product(v1,v2 : ARRAY_OF integer;)
    VAR
    i:integer;
    BEGIN
@@ -59,7 +59,7 @@ FOR i FROM 0 TO n-1 STEP step  DO
     read(v2[i]);
 END_FOR
     FOR k FROM 0 TO n-1 STEP step DO
-        ps:= dot_product(v1, v2, ps)
+        ps:= dot_product(v1, v2)
         IF ps = 0 THEN
             PRINT "Les vecteurs v1 et v2 sont orthogonaux."
         ELSE
